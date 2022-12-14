@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col">
+      <img src="{{char.image}}">
+    </div>
+    <div class="col">
+      <p><strong>Name: </strong>{{char.name}}</p>
+      <p><strong>Status: </strong>{{char.status}}</p>
+      <p><strong>Specie: </strong>{{char.species}}</p>
+      <p><strong>Gender: </strong>{{char.gender}}</p>
+      <p><strong>Origin: </strong>{{char.origin}}</p>
+      <p><strong>Location: </strong>{{char.location}}</p>
+      <button class="btn btn-danger me-2" (click)="deleteCharacter()">Delete</button>
+      <a class="btn btn-success" href="/characters/{{char.id}}/update">Update</a>
+    </div>
+  </div>
+</div>

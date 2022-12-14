@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col mt-5">
+      <div class="submit-form">
+        <div *ngIf="!submitted">
+          <form [formGroup]="addChar">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required name="name" formControlName="name"/>
+
+            <label for="status">Status</label>
+            <input type="text" class="form-control" id="status" required name="status" formControlName="status"/>
+
+            <label for="species">Species</label>
+            <input type="text" class="form-control" id="species" required name="species" formControlName="species"/>
+
+            <label for="gender">Gender</label>
+            <input type="text" class="form-control" id="gender" required name="gender" formControlName="gender"/>
+
+            <label for="origin">Origin</label>
+            <input type="text" class="form-control" id="origin" required name="origin" formControlName="origin"/>
+
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" required name="location" formControlName="location"/>
+
+            <button (click)="saveCharacter()" class="btn btn-success mt-3">Submit</button>
+          </form>
+        </div>
+        <div *ngIf="submitted">
+          <h4>Character was submitted successfully!</h4>
+          <button class="btn btn-success mt-3" (click)="newCharacter()">Add New</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

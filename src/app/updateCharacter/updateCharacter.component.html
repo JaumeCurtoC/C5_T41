@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col mt-5">
+      <div class="submit-form">
+          <form [formGroup]="upChar">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required name="name" formControlName="name" value="{{char.name}}"/>
+
+            <label for="status">Status</label>
+            <input type="text" class="form-control" id="status" required name="status" formControlName="status" value="{{char.status}}"/>
+
+            <label for="species">Species</label>
+            <input type="text" class="form-control" id="species" required name="species" formControlName="species" value="{{char.species}}"/>
+
+            <label for="gender">Gender</label>
+            <input type="text" class="form-control" id="gender" required name="gender" formControlName="gender" value="{{char.gender}}"/>
+
+            <label for="origin">Origin</label>
+            <input type="text" class="form-control" id="origin" required name="origin" formControlName="origin" value="{{char.origin}}"/>
+
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" required name="location" formControlName="location" value="{{char.location}}"/>
+
+            <button (click)="updateCharacter()" class="btn btn-success mt-3">Submit</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

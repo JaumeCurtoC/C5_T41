@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="container" *ngIf="characters!= null; else espera">
+    <div class="row">
+        <div class="col mt-5">
+            <a class="btn btn-primary" href="/add">Add Character</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 mt-5" *ngFor="let ch of characters">
+            <app-card [character]="ch"></app-card>
+        </div>
+    </div>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>
